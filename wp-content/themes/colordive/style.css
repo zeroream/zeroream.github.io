@@ -497,7 +497,7 @@ a.card-comments i { color: #43caff; }
 
 .stickywrap { position: relative; }
 .stickywrap:before { content:""; height: 100%; border-radius: 24px; position: absolute; left: 130px; right: 0; top: 0; bottom: 0; pointer-events: none; }
-.stickywrap:after { display: none; content:""; background: url(/wp-content/themes/colordive/img/dot-pattern-dark-2x.png) repeat top left; background-size: 10px 10px; position: absolute; left: 101px; top: 64px; width: 20px; bottom: 0; z-index: -1; opacity: 0.06; mask-image: linear-gradient(0deg, transparent, #000 40%, #000 100%, transparent 100% ); }
+.stickywrap:after { display: none; content:""; background: url(https://zeroream.github.io/wp-content/themes/colordive/img/dot-pattern-dark-2x.png) repeat top left; background-size: 10px 10px; position: absolute; left: 101px; top: 64px; width: 20px; bottom: 0; z-index: -1; opacity: 0.06; mask-image: linear-gradient(0deg, transparent, #000 40%, #000 100%, transparent 100% ); }
 body.dotted-pattern .stickywrap:after { display: block; }
 .stickywrap:nth-child(1):before { border-bottom: 0; }
 .stickywrap .stickywrap-heading { position: sticky; top: 8px; height: 60px; display: flex; align-items: center; font-size: 26px; letter-spacing: -0.02em; font-weight: 800; line-height: 1.5; text-transform: uppercase; color: rgba(0,0,0,0.12); }
@@ -510,7 +510,7 @@ body.dotted-pattern .stickywrap:after { display: block; }
 .stickywrap .stickywrap-heading-inner { display: block; width: 12px; height: 12px; border-radius: 100%; position: absolute; top: 23px; left: 123px; z-index: 3; }
 .stickywrap .stickywrap-heading-inner i { font-size: 14px; color: #fff; display: block; margin-top: 1px; } 
 .stickywrap .stickywrap-inner { margin-left: 100px; padding-left: 40px; margin-bottom: 60px; margin-top: -60px; position: relative; }
-.stickywrap .stickywrap-inner:before { opacity: 0.1; background: url(/wp-content/themes/colordive/img/dot-pattern-light-2x.png) repeat top left; background-size: 10px 10px; content:""; height: 20px; border-radius: 0; position: absolute; right: 20px; left: 60px; bottom: -44px; }
+.stickywrap .stickywrap-inner:before { opacity: 0.1; background: url(https://zeroream.github.io/wp-content/themes/colordive/img/dot-pattern-light-2x.png) repeat top left; background-size: 10px 10px; content:""; height: 20px; border-radius: 0; position: absolute; right: 20px; left: 60px; bottom: -44px; }
 .stickywrap .stickywrap-inner:after { background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); box-shadow: inset 0 1px rgba(255,255,255,0.1); content:""; width: 6px; border-radius: 10px; position: absolute; left: 0; bottom: 0; top: 0; z-index: -1; }
 
 .stickywrap .blog-card:nth-child(odd) .blog-card-link:after {  }
@@ -1178,7 +1178,7 @@ li #reply-title { font-size: 0; margin: 0!important; padding: 0; height: 0; bord
 /* ------------------------------------------------------------------------- *
  *  Slick Carousel Theme
 /* ------------------------------------------------------------------------- */
-.slick-loading .slick-list { background: #fff url(/wp-content/themes/colordive/img/ajax-loader.gif) center center no-repeat;  }
+.slick-loading .slick-list { background: #fff url(https://zeroream.github.io/wp-content/themes/colordive/img/ajax-loader.gif) center center no-repeat;  }
 .slick-prev,.slick-next { font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 20px; height: 20px; padding: 0; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); cursor: pointer; color: transparent; border: none; outline: none; background: transparent;  }
 .slick-prev:hover,.slick-prev:focus,.slick-next:hover,.slick-next:focus { color: transparent; outline: none; background: transparent;  }
 .slick-prev:hover:before,.slick-prev:focus:before,.slick-next:hover:before,.slick-next:focus:before { opacity: 1;  }
