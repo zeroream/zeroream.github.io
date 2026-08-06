@@ -83,6 +83,21 @@ body:where(.dark)  { background: #2d2d14!important; }
 <link rel="stylesheet" id="colordive-dark-css" href="/wp-content/themes/colordive/dark.css?ver=7.0.2" media="all">
 <link rel="stylesheet" id="colordive-font-awesome-css" href="/wp-content/themes/colordive/fonts/all.min.css?ver=7.0.2" media="all">
 <link rel="stylesheet" id="pt-serif-css" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&amp;subset=latin,latin-ext&amp;ver=7.0.2" media="all">
+<link rel="stylesheet" id="searchwp-forms-css" href="/wp-content/plugins/searchwp-live-ajax-search/assets/styles/frontend/search-forms.min.css?ver=1.8.7" media="all">
+<link rel="stylesheet" id="searchwp-live-search-css" href="/wp-content/plugins/searchwp-live-ajax-search/assets/styles/style.min.css?ver=1.8.7" media="all">
+<style id="searchwp-live-search-inline-css">
+.searchwp-live-search-result .searchwp-live-search-result--title a {
+  font-size: 16px;
+}
+.searchwp-live-search-result .searchwp-live-search-result--price {
+  font-size: 14px;
+}
+.searchwp-live-search-result .searchwp-live-search-result--add-to-cart .button {
+  font-size: 14px;
+}
+
+/*# sourceURL=searchwp-live-search-inline-css */
+</style>
 <script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
 <script id="jquery-migrate-js" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
 <script id="colordive-slick-js" src="/wp-content/themes/colordive/js/slick.min.js?ver=7.0.2"></script>
@@ -137,7 +152,6 @@ appStaticSearch = {
 </li>
 </ul>
 </li>
-<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><span class="menu-item-wrapper"><a href="/search/">Search</a></span></li>
 </ul></div>		</nav>
 						</div>
 						
@@ -161,7 +175,6 @@ appStaticSearch = {
 </li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><span class="menu-item-wrapper"><a href="/search/">Search</a></span></li>
 </ul></div>		</nav>
 						</div>
 						
@@ -176,7 +189,7 @@ appStaticSearch = {
 							<div class="search-expand-inner">
 								<form method="get" class="searchform themeform" action="/">
 	<div>
-		<input type="text" class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter">
+		<input type="text" class="search" name="s" data-swplive="true" data-swpengine="default" data-swpconfig="default" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter">
 	</div>
 </form>							</div>
 						</div>
@@ -347,9 +360,52 @@ appStaticSearch = {
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/wordpress/*"},{"not":{"href_matches":["/wordpress/wp-*.php","/wordpress/wp-admin/*","/wordpress/wp-content/uploads/*","/wordpress/wp-content/*","/wordpress/wp-content/plugins/*","/wordpress/wp-content/themes/colordive/*","/wordpress/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script type="text/javascript">var jalwCurrentTerm="10";</script><script type="text/javascript">var jalwCurrentPost={month:"",year:""};</script><link rel="stylesheet" id="js-archive-list-css" href="/wp-content/plugins/jquery-archive-list-widget/assets/css/jal.css?ver=6.3.1" media="all">
+<script type="text/javascript">var jalwCurrentTerm="10";</script><script type="text/javascript">var jalwCurrentPost={month:"",year:""};</script>        <style>
+            .searchwp-live-search-results {
+                opacity: 0;
+                transition: opacity .25s ease-in-out;
+                -moz-transition: opacity .25s ease-in-out;
+                -webkit-transition: opacity .25s ease-in-out;
+                height: 0;
+                overflow: hidden;
+                z-index: 9999995; /* Exceed SearchWP Modal Search Form overlay. */
+                position: absolute;
+                display: none;
+            }
+
+            .searchwp-live-search-results-showing {
+                display: block;
+                opacity: 1;
+                height: auto;
+                overflow: auto;
+            }
+
+            .searchwp-live-search-no-results {
+                padding: 3em 2em 0;
+                text-align: center;
+            }
+
+            .searchwp-live-search-no-min-chars:after {
+                content: "Continue typing";
+                display: block;
+                text-align: center;
+                padding: 2em 2em 0;
+            }
+        </style>
+                <script>
+            var _SEARCHWP_LIVE_AJAX_SEARCH_BLOCKS = true;
+            var _SEARCHWP_LIVE_AJAX_SEARCH_ENGINE = 'default';
+            var _SEARCHWP_LIVE_AJAX_SEARCH_CONFIG = 'default';
+        </script>
+        <link rel="stylesheet" id="js-archive-list-css" href="/wp-content/plugins/jquery-archive-list-widget/assets/css/jal.css?ver=6.3.1" media="all">
 <script id="colordive-theme-toggle-js" src="/wp-content/themes/colordive/js/theme-toggle.js?ver=7.0.2"></script>
 <script id="colordive-scripts-js" src="/wp-content/themes/colordive/js/scripts.js?ver=7.0.2"></script>
+<script id="swp-live-search-client-js-extra">
+var searchwp_live_search_params = [];
+searchwp_live_search_params = {"ajaxurl":"\/wp-admin\/admin-ajax.php","origin_id":10,"config":{"default":{"engine":"default","input":{"delay":300,"min_chars":3},"results":{"position":"bottom","width":"auto","offset":{"x":0,"y":5}},"spinner":{"lines":12,"length":8,"width":3,"radius":8,"scale":1,"corners":1,"color":"#424242","fadeColor":"transparent","speed":1,"rotate":0,"animation":"searchwp-spinner-line-fade-quick","direction":1,"zIndex":2000000000,"className":"spinner","top":"50%","left":"50%","shadow":"0 0 1px transparent","position":"absolute"}}},"msg_no_config_found":"No valid SearchWP Live Search configuration found!","aria_instructions":"When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures."};;
+//# sourceURL=swp-live-search-client-js-extra
+</script>
+<script id="swp-live-search-client-js" src="/wp-content/plugins/searchwp-live-ajax-search/assets/javascript/dist/script.min.js?ver=1.8.7"></script>
 <script id="colordive-nav-script-js" src="/wp-content/themes/colordive/js/nav.js?ver=1785928859"></script>
 <script id="js-archive-list-js" src="/wp-content/plugins/jquery-archive-list-widget/assets/js/jal.js?ver=6.3.1"></script>
 	<script>
