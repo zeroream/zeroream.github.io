@@ -223,10 +223,66 @@ appStaticSearch = {
 			<h1 class="blog-single-title">Search</h1>
 			
 			<div class="entry themeform">
-				<form role="search" method="get" action="/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"><label class="wp-block-search__label" for="wp-block-search__input-1">Explore</label><div class="wp-block-search__inside-wrapper"><input class="wp-block-search__input" id="wp-block-search__input-1" placeholder="" value="" type="search" name="s" required><button aria-label="Search" class="wp-block-search__button wp-element-button" type="submit">Search</button></div></form>
+				
+<div style="background-color: #2D2722; border-radius: 12px; padding: 40px 30px; text-align: center; max-width: 500px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-family: inherit;">
+    
+    <!-- Title Section -->
+    <h3 style="color: #F4EBE1; margin-top: 0; margin-bottom: 20px; font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px;">
+        &#128269; Explore
+    </h3>
+    
+    <!-- Subtitle Section -->
+    <p style="color: #BCB3A8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; padding: 0 10px;">
+        Enter a keyword below to find a specific creative log, poem, or essay tucked into this blog.
+    </p>
+    
+    <!-- Google Search Engine Target Elements -->
+    <script async="" src="https://cse.google.com/cse.js?cx=53bc27563adeb4c62"></script>
+    <div class="gcse-search"></div>
 
-
-<p class="wp-block-paragraph"></p>
+    <!-- Custom CSS Overrides to match Buttondown forms -->
+    <style>
+        /* Force Google's input layout box to inherit your dark box styling */
+        .gsc-control-cse {
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+        .gsc-input-box {
+            background-color: #231E1A !important;
+            border: 1px solid #443B34 !important;
+            border-radius: 6px !important;
+            height: 45px !important;
+            margin-bottom: 15px !important;
+        }
+        input.gsc-input {
+            background: transparent !important;
+            color: #F4EBE1 !important;
+            font-size: 1rem !important;
+            padding-left: 15px !important;
+        }
+        /* Style Google's Action Button to look like your dark sage button */
+        button.gsc-search-button-v2 {
+            background-color: #556253 !important;
+            border: none !important;
+            border-radius: 6px !important;
+            color: #F4EBE1 !important;
+            font-weight: bold !important;
+            height: 45px !important;
+            width: 100% !important;
+            font-size: 1rem !important;
+            cursor: pointer !important;
+            transition: background 0.2s ease !important;
+        }
+        button.gsc-search-button-v2:hover {
+            background-color: #647362 !important;
+        }
+        /* Clean up Google default interface elements */
+        .gsc-search-button-box { vertical-align: middle !important; width: 100% !important; }
+        .gsc-branding { display: none !important; }
+        .gsst_b { vertical-align: middle !important; }
+    </style>
+</div>
 				<div class="clear"></div>
 			</div><!--/.entry-->
 			
